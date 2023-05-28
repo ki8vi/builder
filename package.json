@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "parcel": "^2.9.1"
+  },
+  "name": "builder",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  
+  "scripts": {
+    "serve": "parcel ./src/index.html -p 3000 --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ki8vi/builder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ki8vi/builder/issues"
+  },
+  "homepage": "https://github.com/ki8vi/builder#readme",
+  "description": ""
+}
