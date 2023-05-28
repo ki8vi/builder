@@ -8,7 +8,7 @@ const model = [
         "3333333",
         "3333333"
     ]},
-    {type: "image", value: "img.webp"}
+    {type: "image", value: "./img/img.webp"}
 ];
 const site = document.querySelector("#site");
 
