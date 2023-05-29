@@ -1,14 +1,17 @@
+import img from "./img/img.png";
+
+console.log("ss")
 const model = [
     {type: "title", value: "hello js"},
     {type:"text", value: "some text"},
     {type: "columns", value: [
-        "11711115",
+        "35115",
         "2255522222",
         "3333333",
         "3333333",
         "3333333"
     ]},
-    {type: "image", value: "./img/img.png"}
+    {type: "image", value: img}
 ];
 const site = document.querySelector("#site");
 
@@ -50,6 +53,6 @@ function columns(el) {
 }
 function image(el) {
     return `<div class="row">
-                <img src="${el.value}" type="image" alt="logo"/>
+                <img src="${el.value}"  alt="logo"/>
             </div>`
 }
