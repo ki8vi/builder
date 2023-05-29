@@ -2,13 +2,13 @@ const model = [
     {type: "title", value: "hello js"},
     {type:"text", value: "some text"},
     {type: "columns", value: [
-        "1111115",
+        "11711115",
         "2255522222",
         "3333333",
         "3333333",
         "3333333"
     ]},
-    {type: "image", value: "./img/img.webp"}
+    {type: "image", value: "./img/img.png"}
 ];
 const site = document.querySelector("#site");
 
@@ -50,6 +50,6 @@ function columns(el) {
 }
 function image(el) {
     return `<div class="row">
-                <img src="${el.value}"/>
+                <img src="${el.value}" type="image" alt="logo"/>
             </div>`
 }
