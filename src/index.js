@@ -1,18 +1,7 @@
-import img from "./img/img.png";
+import {title, text, columns, image} from "./templates"
+import {model} from "./model"
+import "./style/index.css"
 
-
-const model = [
-    {type: "title", value: "hello js"},
-    {type:"text", value: "some text"},
-    {type: "columns", value: [
-        "35",
-        "2255522222",
-        "3333333",
-        "3333333",
-        "3333333"
-    ]},
-    {type: "image", value: img}
-];
 const site = document.querySelector("#site");
 
 model.forEach(el => {
@@ -30,29 +19,4 @@ model.forEach(el => {
     site.insertAdjacentHTML("beforeend", html)
 });
 
-function title(el) {
-    return `<div class="row">
-                <div class="col-sm">
-                    <h1>${el.value}</h1>
-                </div>
-            </div>`
-}
-function text(el) {
-    return `<div class="row">
-                <div class="col-sm">
-                    <p>${el.value}</p>
-                </div>
-            </div>`
-}
-function columns(el) {
-    let html = ""
-    el.value.forEach(item => html += `<div class="col-sm">${item}</div>`)
-    return `<div class="row">
-                ${html}
-            </div>`
-}
-function image(el) {
-    return `<div class="row">
-                <img src="${el.value}"  alt="logo"/>
-            </div>`
-}
+
