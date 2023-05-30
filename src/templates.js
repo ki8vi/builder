@@ -1,26 +1,25 @@
-export function title(el) {
-    return `<div class="row">
-                <div class="col-sm">
-                    <h1>${el.value}</h1>
-                </div>
-            </div>`
+import {row, col, css} from "./utils";
+
+
+
+function title(el) {
+    const {tag = "h1", styles} = el.options
+    return row(col(`<${tag}>${el.value}</${tag}>`), css(styles))
 }
-export function text(el) {
-    return `<div class="row">
-                <div class="col-sm">
-                    <p>${el.value}</p>
-                </div>
-            </div>`
+function text(el) {
+    return row(col(`<p>${el.value}</p>`))
 }
-export function columns(el) {
-    let html = ""
-    el.value.forEach(item => html += `<div class="col-sm">${item}</div>`)
-    return `<div class="row">
-                ${html}
-            </div>`
+function columns(el) {
+    let html = el.value.map(col).join("")
+    return row(html)
 }
-export function image(el) {
-    return `<div class="row">
-                <img src="${el.value}"  alt="logo"/>
-            </div>`
+function image(el) {
+    return row(`<img src="${el.value}"  alt="logo"/>`)
+}
+
+export const templates = {
+    title,
+    text,
+    columns,
+    image
 }
